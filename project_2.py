@@ -88,26 +88,7 @@ def scrape_it_news():
         pirnt_news(index, title, link)
     print()
 
-def scrape_cnn_news():
-    print("[CSS 뉴스]")
-    #url = "https://edition.cnn.com/business/tech"
-    url = "https://edition.cnn.com/business"
-    res = requests.get(url)
-    res.raise_for_status()
-    soup = BeautifulSoup(res.text, "lxml")
-    #soup = create_soup(url)
-    #print(soup)
-    news_list = soup.find_all("ul")
-    print()
-    #print(news_list)
-    #for index, news in enumerate(news_list):
-        #title = news.find_all("span").get_text()
-        #link = news.find_all("a")["href"]
-        #print(index, title, link)
-    print()
-
 if __name__ == "__main__":
     scrape_weather() #오늘의 날씨 정보 가져오기
     scrape_headline_news() #헤드라인 뉴스 정보 가져오기
     scrape_it_news()
-    scrape_cnn_news()
