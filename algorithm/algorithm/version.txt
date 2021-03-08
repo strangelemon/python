@@ -1,0 +1,2 @@
+21-03-08 1.0.0
+add to "palindrome.py"
